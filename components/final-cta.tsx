@@ -40,17 +40,7 @@ export default function FinalCta() {
                 Solicitar presupuesto
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <a
-                href={whatsappLink(
-                  "Hola Chunitur, necesito una solución de transporte."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border-2 border-white/70 px-7 text-[15px] font-bold text-white transition-colors hover:border-white hover:bg-white/10 sm:w-auto"
-              >
-                <WhatsAppIcon className="h-4 w-4" />
-                Hablar por WhatsApp
-              </a>
+              
             </div>
           </div>
         </div>

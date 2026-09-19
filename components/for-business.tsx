@@ -37,25 +37,18 @@ export default function ForBusiness() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:mt-9">
+            <div className="mt-6 sm:mt-9">
               <a
                 href={whatsappLink(
                   "Hola Chunitur, quería consultar por un servicio de transporte y distribución para mi negocio."
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-accent px-6 text-[15px] font-bold text-white transition-colors hover:bg-accent-deep"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-orange px-6 text-[15px] font-bold text-white transition-colors hover:bg-orange/90"
               >
+                <WhatsAppIcon className="h-4 w-4 text-white" />
                 Quiero consultar por mi negocio
-                <ArrowRight className="h-4 w-4" />
               </a>
-              <Link
-                href="#contacto"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-ink/15 bg-white px-6 text-[15px] font-bold text-ink transition-colors hover:border-ink/30"
-              >
-                <WhatsAppIcon className="h-4 w-4 text-whatsapp" />
-                Solicitar presupuesto
-              </Link>
             </div>
           </div>
 
