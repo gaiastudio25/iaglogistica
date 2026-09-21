@@ -42,7 +42,7 @@ const jsonLd = {
   description: company.description,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Villa Olmos",
+    addressLocality: "Pinamar",
     addressRegion: "Canelones",
     addressCountry: "UY",
   },

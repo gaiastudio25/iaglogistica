@@ -111,7 +111,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-paper/40 sm:flex-row">
           <p>
-            © {year} {company.name}. Villa Olmos, Canelones, Uruguay.
+            © {year} {company.name}. Pinamar, Canelones, Uruguay.
           </p>
           <p className="font-semibold uppercase tracking-[0.14em]">
             Transporte y logística en Uruguay
