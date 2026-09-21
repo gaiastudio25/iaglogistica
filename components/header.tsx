@@ -11,6 +11,7 @@ const nav = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#servicios" },
   { label: "Empresa", href: "#empresa" },
+  { label: "Vehículos", href: "#vehiculos" },
   { label: "Contacto", href: "#contacto" },
 ];
 

@@ -10,8 +10,8 @@ const services = [
   "Fletes y Encomiendas",
   "Cadetería y Comisiones",
   "Mudanzas",
-  "Depósito y Almacenamiento",
-  "Fulfillment para E-commerce",
+  "Encomiendas a Florida",
+  "Encomiendas a Rocha",
   "Vehículos con Chofer",
 ];
 
@@ -19,6 +19,7 @@ const nav = [
   { label: "Inicio", href: "#inicio" },
   { label: "Servicios", href: "#servicios" },
   { label: "Empresa", href: "#empresa" },
+  { label: "Vehículos", href: "#vehiculos" },
   { label: "Contacto", href: "#contacto" },
 ];
 

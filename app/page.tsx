@@ -4,6 +4,7 @@ import Services from "@/components/services";
 import ForBusiness from "@/components/for-business";
 import WhyChunitur from "@/components/why-chunitur";
 import HowWeWork from "@/components/how-we-work";
+import Vehicles from "@/components/vehicles";
 import FinalCta from "@/components/final-cta";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
@@ -19,6 +20,7 @@ export default function Home() {
         <ForBusiness />
         <WhyChunitur />
         <HowWeWork />
+        <Vehicles />
         <FinalCta />
         <Contact />
       </main>

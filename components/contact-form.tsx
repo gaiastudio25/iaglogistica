@@ -9,8 +9,8 @@ const serviceOptions = [
   "Fletes y Encomiendas",
   "Cadetería y Comisiones",
   "Mudanzas",
-  "Depósito y Almacenamiento",
-  "Fulfillment para E-commerce",
+  "Encomiendas a Florida",
+  "Encomiendas a Rocha",
   "Vehículos con Chofer",
   "Otro / no sé todavía",
 ];

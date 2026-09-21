@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const serviceGroups = [
@@ -10,11 +13,6 @@ const serviceGroups = [
         title: "Logística para Mercado Libre",
         description:
           "Flex, Mercado Envíos y distribución para vendedores de Mercado Libre.",
-      },
-      {
-        title: "Fulfillment para E-commerce",
-        description:
-          "Recepción, almacenamiento, preparación y despacho de pedidos.",
       },
     ],
   },
@@ -37,8 +35,8 @@ const serviceGroups = [
   },
   {
     number: "03",
-    title: "Transporte y Cargas",
-    intro: "Soluciones para mercadería, paquetes y cargas de distinto tamaño.",
+    title: "Transporte y Encomiendas",
+    intro: "Soluciones para mercadería, paquetes y envíos a todo el país.",
     services: [
       {
         title: "Fletes y Encomiendas",
@@ -50,32 +48,43 @@ const serviceGroups = [
         description:
           "Unidades con chofer para servicios puntuales o recurrentes.",
       },
+      {
+        title: "Encomiendas a Florida",
+        description:
+          "Envíos de encomiendas con destino a Florida y zonas aledañas.",
+      },
+      {
+        title: "Encomiendas a Rocha",
+        description:
+          "Envíos de encomiendas con destino a Rocha y zonas aledañas.",
+      },
     ],
   },
   {
     number: "04",
-    title: "Mudanzas y Almacenamiento",
-    intro: "Traslado y guarda de pertenencias o mercadería.",
+    title: "Mudanzas",
+    intro: "Traslado de pertenencias o mercadería.",
     services: [
       {
         title: "Mudanzas",
         description:
           "Traslados coordinados para hogares, oficinas y empresas.",
       },
-      {
-        title: "Depósito y Almacenamiento",
-        description:
-          "Espacio seguro para mercadería, productos, muebles y pertenencias.",
-      },
     ],
   },
 ];
 
 export default function Services() {
+  const [open, setOpen] = useState<string | null>(null);
+
+  function toggle(number: string) {
+    setOpen((prev) => (prev === number ? null : number));
+  }
+
   return (
     <section
       id="servicios"
-      className="scroll-mt-16 bg-paper py-12 sm:py-16 lg:py-24"
+      className="scroll-mt-16 bg-sand/50 py-12 sm:py-16 lg:py-24"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
@@ -103,44 +112,52 @@ export default function Services() {
 
           {/* Service index */}
           <div className="border-b border-ink/15">
-            {serviceGroups.map((group) => (
-              <details
-                key={group.number}
-                className="group border-t border-ink/15"
-              >
-                <summary className="flex cursor-pointer list-none items-center gap-4 py-5 sm:gap-6 sm:py-6 [&::-webkit-details-marker]:hidden">
-                  <span className="text-xs font-bold tabular-nums text-orange sm:text-sm">
-                    {group.number}
-                  </span>
+            {serviceGroups.map((group) => {
+              const isOpen = open === group.number;
+              return (
+                <div key={group.number} className="border-t border-ink/15">
+                  <button
+                    type="button"
+                    onClick={() => toggle(group.number)}
+                    className="flex w-full cursor-pointer items-center gap-4 py-5 sm:gap-6 sm:py-6"
+                  >
+                    <span className="text-xs font-bold tabular-nums text-orange sm:text-sm">
+                      {group.number}
+                    </span>
 
-                  <div className="min-w-0 flex-1">
-                    <h3 className="text-lg font-extrabold tracking-tight text-ink sm:text-xl">
-                      {group.title}
-                    </h3>
+                    <div className="min-w-0 flex-1 text-left">
+                      <h3 className="text-lg font-extrabold tracking-tight text-ink sm:text-xl">
+                        {group.title}
+                      </h3>
 
-                    <p className="mt-1 hidden text-sm text-ink/50 sm:block">
-                      {group.intro}
-                    </p>
-                  </div>
-
-                  <ChevronDown className="h-5 w-5 flex-none text-ink/40 transition-transform duration-300 group-open:rotate-180" />
-                </summary>
-
-                <div className="grid gap-5 pb-6 pl-8 sm:grid-cols-2 sm:gap-8 sm:pb-8 sm:pl-12">
-                  {group.services.map((service) => (
-                    <div key={service.title}>
-                      <h4 className="text-sm font-bold text-ink sm:text-[15px]">
-                        {service.title}
-                      </h4>
-
-                      <p className="mt-1.5 text-sm leading-relaxed text-ink/55">
-                        {service.description}
+                      <p className="mt-1 hidden text-sm text-ink/50 sm:block">
+                        {group.intro}
                       </p>
                     </div>
-                  ))}
+
+                    <ChevronDown
+                      className={`h-5 w-5 flex-none text-ink/40 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+
+                  <div
+                    className={`grid gap-5 overflow-hidden transition-all duration-300 sm:grid-cols-2 sm:gap-8 ${isOpen ? "max-h-96 pb-6 pl-8 sm:pb-8 sm:pl-12" : "max-h-0"}`}
+                  >
+                    {group.services.map((service) => (
+                      <div key={service.title}>
+                        <h4 className="text-sm font-bold text-ink sm:text-[15px]">
+                          {service.title}
+                        </h4>
+
+                        <p className="mt-1.5 text-sm leading-relaxed text-ink/55">
+                          {service.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </details>
-            ))}
+              );
+            })}
           </div>
         </div>
 

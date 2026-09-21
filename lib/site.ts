@@ -3,7 +3,7 @@ export const company = {
   tagline: "Transporte y logística en Uruguay",
   description:
     "Transporte, distribución y entregas para empresas, comercios y e-commerce en Uruguay.",
-  location: "Pando - Barros Blancos, Ciudad de la Costa y zonas aledañas",
+  location: "Pinamar",
   whatsappNumber: "59892092886",
   whatsappDisplay: "092 092 886",
   phoneDisplay: "092 092 886",

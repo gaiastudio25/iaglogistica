@@ -9,8 +9,6 @@ const services = [
   "Fletes y Encomiendas",
   "Cadetería",
   "Mudanzas",
-  "Depósito",
-  "Fulfillment",
 ];
 
 export default function Hero() {

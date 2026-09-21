@@ -5,7 +5,7 @@ import { whatsappLink } from "@/lib/site";
 
 export default function FinalCta() {
   return (
-    <section className="bg-paper pb-12 sm:pb-16 lg:pb-24">
+    <section className="bg-sand/50 pb-12 sm:pb-16 lg:pb-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-2xl bg-accent px-5 py-10 text-center text-white sm:rounded-3xl sm:px-6 sm:py-14 md:px-12 md:py-20">
           <svg
